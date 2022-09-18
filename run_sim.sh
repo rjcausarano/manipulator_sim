@@ -1,4 +1,6 @@
 #!/bin/bash
 
-xacro manipulator.urdf.xacro > model/manipulator/manipulator.urdf
-gazebo --verbose manipulator.world
+CURRENT_PATH=$( dirname -- "$0"; )
+cd $CURRENT_PATH
+xacro manipulator_gazebo/urdf/manipulator.urdf.xacro > manipulator_gazebo/model/manipulator/manipulator.urdf
+ros2 launch manipulator_gazebo run_sim.launch.py

@@ -32,13 +32,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/base.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/base.stl"/>
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/base.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/base.stl"/>
         </geometry>
       </collision>
       <xacro:inertial_dummy/>
@@ -59,13 +59,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/link_1.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/link_1.stl"/>
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/link_1.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/link_1.stl"/>
         </geometry>
       </collision>
       <xacro:inertial_dummy/>
@@ -87,13 +87,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/link_2.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/link_2.stl"/>
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/link_2.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/link_2.stl"/>
         </geometry>
       </collision>
       <xacro:inertial_dummy/>
@@ -115,13 +115,13 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/link_3.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/link_3.stl"/>
         </geometry>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="$(cwd)/model/manipulator/link_3.stl"/>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/link_3.stl"/>
         </geometry>
       </collision>
       <xacro:inertial_dummy/>
