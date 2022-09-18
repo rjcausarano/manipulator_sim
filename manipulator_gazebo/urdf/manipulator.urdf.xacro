@@ -131,4 +131,9 @@
       <material>Gazebo/Green</material>
     </gazebo>
 
+    <gazebo>
+      <plugin name="manipulator_drive_plugin" filename="libmanipulator_drive.so">
+      </plugin>
+    </gazebo>
+
   </robot>

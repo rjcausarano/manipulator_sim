@@ -118,4 +118,8 @@
   <gazebo reference="link_3">
     <material>Gazebo/Green</material>
   </gazebo>
+  <gazebo>
+    <plugin filename="libmanipulator_drive.so" name="manipulator_drive_plugin">
+      </plugin>
+  </gazebo>
 </robot>
