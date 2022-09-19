@@ -26,8 +26,7 @@ void ManipulatorDrive::Reset()
 
 void ManipulatorDrive::OnSetPose(manipulator_msgs::msg::Pose::SharedPtr msg)
 {
-    std::cout << "The vector size is: " << msg->data.size() << std::endl;
-    // std::cout << "You are trying to set the pose: " << msg->data[0] << msg->data[1] << msg->data[2] << std::endl;
+    std::cout << "You are trying to set the pose: " << msg->data[0] << msg->data[1] << msg->data[2] << std::endl;
 }
 
 GZ_REGISTER_MODEL_PLUGIN(ManipulatorDrive)

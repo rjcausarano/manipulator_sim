@@ -22,7 +22,6 @@ link_directories(${gazebo_dev_LIBRARY_DIRS})
 add_library(manipulator_drive SHARED
   src/manipulator_drive.cpp
 )
-
 target_include_directories(manipulator_drive PUBLIC include)
 ament_target_dependencies(manipulator_drive
   "gazebo_dev"
@@ -31,7 +30,13 @@ ament_target_dependencies(manipulator_drive
   "manipulator_msgs"
 )
 ament_export_libraries(manipulator_drive)
-# target_link_libraries(manipulator_drive gazebo_ros_helpers)
+
+add_executable(pose_calculator src/pose_calculator.cpp)
+target_include_directories(pose_calculator PUBLIC include)
+ament_target_dependencies(pose_calculator
+  "manipulator_msgs"
+  "rclcpp"
+)
 
 install(
   DIRECTORY
@@ -48,6 +53,7 @@ install(DIRECTORY include/
 
 install(TARGETS
     manipulator_drive
+    pose_calculator
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION lib/${PROJECT_NAME})
