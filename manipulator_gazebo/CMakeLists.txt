@@ -9,8 +9,11 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(gazebo REQUIRED)
 find_package(gazebo_dev REQUIRED)
+find_package(gazebo_ros REQUIRED)
 find_package(urdf REQUIRED)
 find_package(xacro REQUIRED)
+find_package(manipulator_msgs REQUIRED)
+find_package(rclcpp REQUIRED)
 
 link_directories(${gazebo_dev_LIBRARY_DIRS})
 
@@ -23,6 +26,9 @@ add_library(manipulator_drive SHARED
 target_include_directories(manipulator_drive PUBLIC include)
 ament_target_dependencies(manipulator_drive
   "gazebo_dev"
+  "gazebo_ros"
+  "rclcpp"
+  "manipulator_msgs"
 )
 ament_export_libraries(manipulator_drive)
 # target_link_libraries(manipulator_drive gazebo_ros_helpers)

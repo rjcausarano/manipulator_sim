@@ -1,6 +1,9 @@
 #pragma once
 
+#include <manipulator_msgs/msg/pose.hpp>
+#include "rclcpp/rclcpp.hpp"
 #include <gazebo/common/Plugin.hh>
+#include <gazebo_ros/node.hpp>
 #include <memory>
 
 namespace manipulator_gazebo
@@ -13,10 +16,12 @@ public:
 
 protected:
   void Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr _sdf) override;
-
   void Reset() override;
 
 private:
+  void OnSetPose(manipulator_msgs::msg::Pose::SharedPtr msg);
 
+  gazebo_ros::Node::SharedPtr ros_node_{nullptr};
+  rclcpp::Subscription<manipulator_msgs::msg::Pose>::SharedPtr pose_angles_sub_;
 };
 }

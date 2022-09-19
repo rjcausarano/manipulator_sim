@@ -14,7 +14,10 @@
 
   <depend>urdf</depend>
   <depend>gazebo_dev</depend>
+  <depend>gazebo_ros</depend>
   <depend>xacro</depend>
+  <depend>manipulator_msgs</depend>
+  <depend>rclcpp</depend>
 
   <exec_depend>ros2launch</exec_depend>
 
