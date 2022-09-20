@@ -59,12 +59,13 @@
   </link>
   <gazebo reference="link_1">
     <material>Gazebo/White</material>
+    <turnGravityOff>true</turnGravityOff>
   </gazebo>
   <joint name="joint_2" type="revolute">
     <parent link="link_1"/>
     <child link="link_2"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" lower="0.7853981633974483" upper="1.5707963267948966" velocity="1.0"/>
+    <limit effort="1000.0" lower="0" upper="1.5707963267948966" velocity="1.0"/>
     <origin rpy="1.5707963267948966 0 0" xyz="0 0 0.03"/>
   </joint>
   <link name="link_2">
@@ -88,13 +89,14 @@
   </link>
   <gazebo reference="link_2">
     <material>Gazebo/Blue</material>
+    <turnGravityOff>true</turnGravityOff>
   </gazebo>
   <joint name="joint_3" type="revolute">
     <parent link="link_2"/>
     <child link="link_3"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1000.0" lower="-3.141592653589793" upper="1.5707963267948966" velocity="1.0"/>
-    <origin rpy="0 0 0" xyz="0.25 0 0"/>
+    <limit effort="1000.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="1.0"/>
+    <origin rpy="3.141592653589793 3.141592653589793 0" xyz="0.25 0 0"/>
   </joint>
   <link name="link_3">
     <visual>
@@ -117,6 +119,7 @@
   </link>
   <gazebo reference="link_3">
     <material>Gazebo/Green</material>
+    <turnGravityOff>true</turnGravityOff>
   </gazebo>
   <gazebo>
     <plugin filename="libmanipulator_drive.so" name="manipulator_drive_plugin">

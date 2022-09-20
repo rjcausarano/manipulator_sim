@@ -3,6 +3,8 @@
 #include <manipulator_msgs/msg/pose.hpp>
 #include "rclcpp/rclcpp.hpp"
 #include <gazebo/common/Plugin.hh>
+#include <gazebo/physics/Model.hh>
+#include <gazebo/physics/Joint.hh>
 #include <gazebo_ros/node.hpp>
 #include <memory>
 
@@ -23,5 +25,8 @@ private:
 
   gazebo_ros::Node::SharedPtr ros_node_{nullptr};
   rclcpp::Subscription<manipulator_msgs::msg::Pose>::SharedPtr pose_angles_sub_;
+  gazebo::physics::JointPtr joint_1_{nullptr};
+  gazebo::physics::JointPtr joint_2_{nullptr};
+  gazebo::physics::JointPtr joint_3_{nullptr};
 };
 }
