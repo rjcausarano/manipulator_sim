@@ -14,13 +14,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/base.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/base.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/base.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/base.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -42,13 +42,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_1.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_1.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_1.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -72,13 +72,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_2.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_2.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_2.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -102,13 +102,13 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_3.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_3.stl"/>
       </geometry>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="/home/ekumen/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_3.stl"/>
+        <mesh filename="/home/rodri/colcon_ws/src/manipulator_sim/manipulator_gazebo/model/manipulator/link_3.stl"/>
       </geometry>
     </collision>
     <inertial>
