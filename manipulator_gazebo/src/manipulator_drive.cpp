@@ -7,7 +7,6 @@ namespace manipulator_gazebo
 ManipulatorDrive::ManipulatorDrive()
   : gazebo::ModelPlugin()
 {
-  std::cout << "Hello World! Constructor executed!" << std::endl;
 }
 
 void ManipulatorDrive::Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr _sdf)
@@ -24,15 +23,14 @@ void ManipulatorDrive::Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr _s
 
 void ManipulatorDrive::Reset()
 {
-  std::cout << "Hello World! I've Reset" << std::endl;
 }
 
 void ManipulatorDrive::OnSetPose(manipulator_msgs::msg::Pose::SharedPtr msg)
 {
   std::cout << "You are trying to set the pose: " << msg->data[0] << msg->data[1] << msg->data[2] << std::endl;
-  joint_1_->SetPosition(0, msg->data[0]*M_PI/180);
-  joint_2_->SetPosition(0, msg->data[1]*M_PI/180);
-  joint_3_->SetPosition(0, msg->data[2]*M_PI/180);
+  joint_1_->SetPosition(0, msg->data[0]);
+  joint_2_->SetPosition(0, msg->data[1]);
+  joint_3_->SetPosition(0, msg->data[2]);
 }
 
 GZ_REGISTER_MODEL_PLUGIN(ManipulatorDrive)

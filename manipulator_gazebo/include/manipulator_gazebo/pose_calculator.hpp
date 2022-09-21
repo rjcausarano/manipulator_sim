@@ -2,6 +2,7 @@
 
 #include <manipulator_msgs/msg/pose.hpp>
 #include "rclcpp/rclcpp.hpp"
+#include <vector>
 
 class PoseCalculator  : public rclcpp::Node{
 
@@ -10,7 +11,8 @@ public:
     ~PoseCalculator(){};
 
 private:
-    // rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
     rclcpp::Publisher<manipulator_msgs::msg::Pose>::SharedPtr publisher_;
     manipulator_msgs::msg::Pose pose_msg_;
+    const float D1=0.06f, D2=0.25f, D3=0.20f;
+    std::vector<float> calculate_pose(std::vector<float> pose); 
 };
