@@ -134,6 +134,36 @@
       <turnGravityOff>true</turnGravityOff>  
     </gazebo>
 
+    <joint name="joint_4" type="fixed">
+      <parent link="link_3"/>
+      <child link="link_4"/>
+      <origin xyz="${link3_length} 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="link_4">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/sphere.stl"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="$(cwd)/manipulator_gazebo/model/manipulator/sphere.stl"/>
+        </geometry>
+      </collision>
+      <xacro:inertial_dummy/>
+    </link>
+
+    <gazebo reference="joint_4">
+      <preserveFixedJoint>true</preserveFixedJoint>
+    </gazebo>
+    
+    <gazebo reference="link_4">
+      <turnGravityOff>true</turnGravityOff>  
+    </gazebo>
+
     <gazebo>
       <plugin name="manipulator_drive_plugin" filename="libmanipulator_drive.so">
       </plugin>

@@ -5,6 +5,7 @@
 #include <gazebo/common/Plugin.hh>
 #include <gazebo/physics/Model.hh>
 #include <gazebo/physics/Joint.hh>
+#include <gazebo/physics/Link.hh>
 #include <gazebo_ros/node.hpp>
 #include <memory>
 
@@ -28,5 +29,6 @@ private:
   gazebo::physics::JointPtr joint_1_{nullptr};
   gazebo::physics::JointPtr joint_2_{nullptr};
   gazebo::physics::JointPtr joint_3_{nullptr};
+  gazebo::physics::LinkPtr link_4_{nullptr};
 };
 }

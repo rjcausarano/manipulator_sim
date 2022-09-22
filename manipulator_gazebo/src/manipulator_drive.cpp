@@ -1,5 +1,6 @@
 #include <manipulator_gazebo/manipulator_drive.hpp>
 #include <math.h>
+#include <ignition/math/Vector3.hh>
 
 namespace manipulator_gazebo
 {
@@ -19,6 +20,7 @@ void ManipulatorDrive::Load(gazebo::physics::ModelPtr _model, sdf::ElementPtr _s
   joint_1_ = _model->GetJoint("joint_1");
   joint_2_ = _model->GetJoint("joint_2");
   joint_3_ = _model->GetJoint("joint_3");
+  link_4_ = _model->GetLink("link_4");
 }
 
 void ManipulatorDrive::Reset()
@@ -31,6 +33,8 @@ void ManipulatorDrive::OnSetPose(manipulator_msgs::msg::Pose::SharedPtr msg)
   joint_1_->SetPosition(0, msg->data[0]);
   joint_2_->SetPosition(0, msg->data[1]);
   joint_3_->SetPosition(0, msg->data[2]);
+  ignition::math::Vector3d pos = link_4_->WorldPose().Pos();
+  std::cout << "X: " << pos.X() << "Y: " << pos.Y() << "Z: " << pos.Z() << std::endl;
 }
 
 GZ_REGISTER_MODEL_PLUGIN(ManipulatorDrive)
