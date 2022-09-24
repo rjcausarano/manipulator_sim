@@ -34,7 +34,7 @@ void ManipulatorDrive::OnSetPose(manipulator_msgs::msg::Pose::SharedPtr msg)
   joint_2_->SetPosition(0, msg->data[1]);
   joint_3_->SetPosition(0, msg->data[2]);
   ignition::math::Vector3d pos = link_4_->WorldPose().Pos();
-  std::cout << "X: " << pos.X() << "Y: " << pos.Y() << "Z: " << pos.Z() << std::endl;
+  std::cout << "X: " << pos.X() << " Y: " << pos.Y() << " Z: " << pos.Z() << std::endl;
 }
 
 GZ_REGISTER_MODEL_PLUGIN(ManipulatorDrive)
